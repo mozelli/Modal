@@ -1,0 +1,119 @@
+/*
+    Global styles only for this example
+*/
+:root {
+    --color-primary: seashell;
+    --color-secondary: tomato;
+    --font-primary: Trebuchet MS;
+}
+
+/*
+    Button styles
+*/
+
+.classe-teste {
+    color: aqua;
+}
+
+#button button {
+    border: 0;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    height: 40px;
+    width: 120px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+#button button:hover {
+    color:#333;
+    cursor: pointer;
+    background-color: coral;
+}
+
+/*
+    Modal styles
+*/
+
+#modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal .content {
+    background-color: var(--color-primary);
+    margin: 20% auto;
+    width: 70%;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.4),
+                0px 7px 20px rgba(0, 0, 0, 0.17);
+    
+    animation-name: openModal;
+    animation-duration: 1.5s;
+}
+
+@keyframes openModal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+#modal .content header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-secondary);
+    padding: 1rem 1.3rem;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+}
+
+#modal .content header h1 {
+    margin: 0;
+    font-size: 1.3rem;
+
+}
+#modal .content header #closeButton {
+    font: 500 1.6rem sans-serif;
+    color: var(--color-primary);
+    transition: 0.2s;
+}
+
+#modal .content header #closeButton:hover, .closeButton:focus {
+    cursor: pointer;
+    color: #FFF;
+}
+
+#modal .content section.body {
+    font: 500 1rem var(--font-primary);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.3rem;
+    color: #444;
+}
+
+#modal .content footer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color-secondary);
+    padding: 0.8rem 1rem;
+}
+
+#modal .content footer button {
+    border: 0;
+    height: 40px;
+    width: 120px;
+    background-color: var(--color-primary);
+    color: #444;
+    cursor: pointer;
+}
