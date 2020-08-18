@@ -1,11 +1,6 @@
 /*
     Global styles only for this example
 */
-:root {
-    --color-primary: seashell;
-    --color-secondary: tomato;
-    --font-primary: Trebuchet MS;
-}
 
 /*
     Button styles
@@ -17,7 +12,7 @@
 
 #button button {
     border: 0;
-    background-color: var(--color-secondary);
+    background-color: var(--color-orange);
     color: var(--color-primary);
     height: 40px;
     width: 120px;
@@ -47,9 +42,9 @@
 }
 
 #modal .content {
-    background-color: var(--color-primary);
-    margin: 20% auto;
-    width: 70%;
+    background-color: var(--color-light);
+    margin: 10% auto;
+    width: 90%;
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.4),
                 0px 7px 20px rgba(0, 0, 0, 0.17);
     
@@ -72,10 +67,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--color-secondary);
+    background-color: var(--color-orange);
     padding: 1rem 1.3rem;
     font-family: var(--font-primary);
-    color: var(--color-primary);
+    color: var(--color-light);
 }
 
 #modal .content header h1 {
@@ -85,7 +80,7 @@
 }
 #modal .content header #closeButton {
     font: 500 1.6rem sans-serif;
-    color: var(--color-primary);
+    color: var(--color-light);
     transition: 0.2s;
 }
 
@@ -98,14 +93,14 @@
     font: 500 1rem var(--font-primary);
     display: flex;
     flex-direction: column;
-    padding: 1rem 1.3rem;
+    padding: 1rem 1rem;
     color: #444;
 }
 
 #modal .content footer {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color-secondary);
+    background-color: var(--color-orange);
     padding: 0.8rem 1rem;
 }
 
@@ -113,7 +108,13 @@
     border: 0;
     height: 40px;
     width: 120px;
-    background-color: var(--color-primary);
+    background-color: var(--color-light);
     color: #444;
     cursor: pointer;
+}
+
+@media(min-width: 760px) {
+    #modal .content {
+        width: 70px;
+    }
 }
