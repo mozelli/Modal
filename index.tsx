@@ -4,11 +4,10 @@ import './styles.css';
 
 interface ModalProps {
     textHeader: string;
-    textBody: string;
-
+    buttonLabel: string;
 }
 
-const Modal:React.FC<ModalProps> = ({ children, textHeader, textBody }) => {
+const Modal:React.FC<ModalProps> = ({ children, textHeader, buttonLabel }) => {
     const [modalVisibility, setModalVisibility] = useState("none");
     const [ stateModal, setStateModal ] = useState(false);
     
@@ -24,7 +23,7 @@ const Modal:React.FC<ModalProps> = ({ children, textHeader, textBody }) => {
     return (
         <>
             <div id="button">
-                <button onClick={ toggleModal }>{ children }</button>
+                <button onClick={ toggleModal }>{ buttonLabel }</button>
             </div>
 
             <div id="modal" style={{ display: modalVisibility }}>
@@ -39,7 +38,7 @@ const Modal:React.FC<ModalProps> = ({ children, textHeader, textBody }) => {
                         </span>
                     </header>
                     <section className="body">
-                        { textBody }
+                        { children }
                     </section>
                     <footer>
                         <button
