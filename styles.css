@@ -6,24 +6,21 @@
     Button styles
 */
 
-.classe-teste {
-    color: aqua;
-}
-
 #button button {
     border: 0;
     background-color: var(--color-orange);
     color: var(--color-primary);
-    height: 40px;
-    width: 120px;
+    height: 60px;
+    width: 220px;
     font-weight: 600;
     transition: 0.2s;
+    margin: 1rem 0;
 }
 
 #button button:hover {
-    color:#333;
+    color: var(--color-light);
     cursor: pointer;
-    background-color: coral;
+    background-color: var(--color-dark);
 }
 
 /*
